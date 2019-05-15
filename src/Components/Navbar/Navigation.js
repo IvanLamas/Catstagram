@@ -44,7 +44,7 @@ class Navigation extends React.Component {
                         <NavbarToggler onClick={this.toggle}><FontAwesomeIcon icon={faSearch} size="lg" /></NavbarToggler>
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <InputGroup size={"lg"}>
-                                <InputGroupAddon addonType="prepend">
+                                <InputGroupAddon addonType="prepend" className={this.props.pawDisplay}>
                                     <InputGroupText className={"blanco"}>
                                         <FontAwesomeIcon icon={faPaw} size="lg" />
                                     </InputGroupText>

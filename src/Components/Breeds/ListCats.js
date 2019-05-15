@@ -4,12 +4,10 @@ import {Card, Row, Col, Input} from 'reactstrap';
 
 //Assets
 import './Breeds.css';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import {faEye, faHeart, faHeartBroken, faPaw, faEllipsisV} from '@fortawesome/free-solid-svg-icons';
 
 //Components
 import ModalCats from './ModalCats';
-import Navbar from '../Navbar/Navigation';
+import Navigation from '../Navbar/Navigation';
 import Loading from '../Content/Loading';
 
 /*Constants and variables*/
@@ -81,7 +79,10 @@ class ListCats  extends React.Component {
         return(
             <div>
                 {(error ? <p>{error}</p> : null)}
-                <Navbar inputElement={<Input type="text" placeholder="Buscar por raza..." value={this.state.searchString} onChange={this.updateSearchString} />} />
+                <Navigation
+                    inputElement={<Input type="text" placeholder="Buscar por raza..." value={this.state.searchString} onChange={this.updateSearchString} />}
+                    pawDisplay={""}
+                />
                 <br/><br/><br/>
                 <div className={"container"}>
                     <h5>Aquí tienes {filteredBreeds.length} resultados de gatitos.</h5>
@@ -92,9 +93,8 @@ class ListCats  extends React.Component {
                                 ? (<Loading />)
                                 : (filteredBreeds.map(feline => {
                                     const { breeds, url } = feline;
-                                    //while (breeds[0] !== null || breeds[0] !== undefined){
                                     return (
-                                        <Col sm={"3"}>
+                                        <Col sm={"3"} key={url}>
                                             <Card>
                                                 <ModalCats tWidth="100%" tHeight={"230px"}
                                                            name={breeds[0].name}
@@ -103,7 +103,7 @@ class ListCats  extends React.Component {
                                                 />
                                             </Card>
                                         </Col>
-                                    )//}
+                                    )
                                 }))
                         }
                     </Row>

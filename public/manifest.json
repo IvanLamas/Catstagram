@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Catstagram",
+  "name": "Web App to Cat Lovers",
+  "author": "Iván Yllescas Lamas",
   "icons": [
     {
       "src": "favicon.ico",

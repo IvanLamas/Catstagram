@@ -10,7 +10,7 @@ class Content extends React.Component {
         const { body } = this.props;
         return(
             <div>
-                {body}
+                { body }
             </div>
         )
     }

@@ -1,31 +1,32 @@
 //Dependencies
 import React from 'react';
-import PropTypes from 'prop-types';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 //Assets
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 //components
-import Content from './Content';
 import ListCats from './Breeds/ListCats';
 import Footer from './Footer/Footer';
+import Favourites from "./Favourites/Favourites";
+import NotFound from "./Errors/NotFound";
 
 library.add(faSearch)
 
 class App extends React.Component {
-
-    static propTypes = {
-        children: PropTypes.object.isRequired
-    };
-
     render() {
-        const { children } = this.props;
         return(
-            <div>
-                <ListCats />
-                <Content body={children} />
-                <Footer/>
+            <div className="app">
+                <Router>
+                    <Switch>
+                        <Route path="/" component={ListCats} exact />
+                        <Route path="/list" component={ListCats} exact />
+                        <Route path="/favourites" component={Favourites} exact />
+                        <Route component={NotFound} />
+                    </Switch>
+                </Router>
+                <Footer />
             </div>
         )
     }

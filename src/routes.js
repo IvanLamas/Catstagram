@@ -11,9 +11,10 @@ import NotFound from './Components/Errors/NotFound';
 const AppRoutes = () =>
     <App>
         <Switch>
-            <Route path="/" component={"ListCats"} />
-            <Route path="/favourites" component={"Favourites"} />
-            <Route component="NotFound" />
+            <Route path="/" component={ListCats} exact />
+            <Route path="/list" component={ListCats} exact />
+            <Route path="/favourites" component={Favourites} exact />
+            <Route component={NotFound} />
         </Switch>
     </App>;
 
