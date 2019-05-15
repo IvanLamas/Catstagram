@@ -23,6 +23,7 @@ class App extends React.Component {
         const { children } = this.props;
         return(
             <div>
+                <ListCats />
                 <Content body={children} />
                 <Footer/>
             </div>
