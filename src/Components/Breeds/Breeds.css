@@ -1,5 +1,8 @@
-
 .tImage:hover {
     filter: sepia(60%);
     cursor: pointer;
+}
+
+.close {
+    display: block;
 }

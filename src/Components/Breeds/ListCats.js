@@ -1,10 +1,16 @@
+//Dependencies
 import React from 'react';
-import Loading from '../App/Loading';
+import {Card, Row, Col, Input} from 'reactstrap';
+
+//Assets
+import './Breeds.css';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import {faEye, faHeart, faHeartBroken, faPaw, faEllipsisV} from '@fortawesome/free-solid-svg-icons';
-import {Card, Row, Col, Input} from 'reactstrap';
+
+//Components
 import ModalCats from './ModalCats';
 import Navbar from '../Navbar/Navigation';
+import Loading from '../Content/Loading';
 
 /*Constants and variables*/
 let limit = 68;
@@ -91,7 +97,6 @@ class ListCats  extends React.Component {
                                         <Col sm={"3"}>
                                             <Card>
                                                 <ModalCats tWidth="100%" tHeight={"230px"}
-                                                           /*name={breeds[0] !== null || breeds[0] !== undefined ? breeds[0].name : "Sin categoria"}*/
                                                            name={breeds[0].name}
                                                            url={url}
                                                            className={"rounded mx-auto d-block tImage"}

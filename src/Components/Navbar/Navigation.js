@@ -1,7 +1,5 @@
+//Dependencies
 import React from 'react';
-import './Navigation.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faTh, faHeart, faPaw } from '@fortawesome/free-solid-svg-icons';
 import {
     InputGroup,
     InputGroupAddon,
@@ -11,10 +9,15 @@ import {
     NavbarToggler,
     NavbarBrand,
     Nav,
-    NavItem,
-    NavLink
+    NavItem
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
+//Assets
+import './Navigation.css';
 import logo from './cat.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faTh, faHeart, faPaw } from '@fortawesome/free-solid-svg-icons';
 
 class Navigation extends React.Component {
     constructor(props) {
@@ -51,14 +54,14 @@ class Navigation extends React.Component {
                         </Collapse>
                         <Nav className="contents" navbar>
                             <NavItem>
-                                <NavLink href="/components/">
+                                <Link to="/list" className={"nav-link"}>
                                     <FontAwesomeIcon icon={faTh} size="lg" />
-                                </NavLink>
+                                </Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">
+                                <Link to="/favourites" className={"nav-link"}>
                                     <FontAwesomeIcon icon={faHeart} size="lg" />
-                                </NavLink>
+                                </Link>
                             </NavItem>
                         </Nav>
                     </div>
