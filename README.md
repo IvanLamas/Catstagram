@@ -5,12 +5,12 @@ Este proyecto se inició con [Create React App] (https://github.com/facebook/cre
 1.- Clone el proyecto en su directorio local:
 ### `git clone https://github.com/IvanLamas/Catstagram.git`
 
-2.- Acceda a la raíz del proyecto y ejecute el comando de instalación de dependencias:
+2.- Acceda a la raíz del proyecto y ejecute éste comando desde su terminal:
 ### `npm install --save`
 
 ## Scripts disponibles
 
-En el directorio del proyecto, puede ejecutar:
+En el directorio del proyecto, puede ejecutar para inicial la aplicación en su navegador por defecto:
 
 ### `npm start`
 
