@@ -3,7 +3,7 @@ Este proyecto se inició con [Create React App] (https://github.com/facebook/cre
 ## Instalación
 
 1.- Clone el proyecto en su directorio local:
-### `git clone https://url_del_proyecto_en_github`
+### `git clone https://github.com/IvanLamas/Catstagram.git`
 
 2.- Acceda a la raíz del proyecto y ejecute el comando de instalación de dependencias:
 ### `npm install --save`
