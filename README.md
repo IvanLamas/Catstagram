@@ -1,6 +1,6 @@
 Este proyecto se inició con [Create React App] (https://github.com/facebook/create-react-app).
 
-##Instalación
+## Instalación
 
 1.- Clone el proyecto en su directorio local:
 ### `git clone https://url_del_proyecto_en_github`
@@ -45,7 +45,7 @@ En su lugar, copiará todos los archivos de configuración y las dependencias tr
 
 No tienes que usar nunca `eject`. El conjunto de funciones seleccionadas es adecuado para implementaciones pequeñas y medianas, y no debe sentirse obligado a usar esta función. Sin embargo, entendemos que esta herramienta no sería útil si no pudiera personalizarla cuando esté listo para ello.
 
-##Respuestas de la prueba técnica Front End - Rokode
+## Respuestas de la prueba técnica Front End - Rokode
 
 1.- En caso de que no se haya implementado el módulo de imágenes
     favoritas, ¿qué tecnología/herramientas utilizarías para guardar los
